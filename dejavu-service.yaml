@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.26.0 (40646f47)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: dejavu
+  name: dejavu
+spec:
+  ports:
+    - name: "1358"
+      port: 1358
+      targetPort: 1358
+  selector:
+    io.kompose.service: dejavu
+status:
+  loadBalancer: {}
